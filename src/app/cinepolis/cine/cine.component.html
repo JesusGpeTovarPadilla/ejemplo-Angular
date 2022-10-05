@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="row" id="Enca">
+    <H1></H1>
+  </div>
+  <div class="row" id="contenedor">
+    <div class="col-6"> 
+      <div  class="mb-3 row">
+          <h2>Entrada</h2>
+      </div>
+     <div class="mb-3 row">
+        
+        <div class="input-group mb-3">
+          <span class="input-group-text"> Nombre comprador </span>
+          <input type="text" [(ngModel)]="nombre" class="form-control" aria-label="Amount (to the nearest dollar)">
+          
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <div class="input-group mb-3">
+          <span class="input-group-text"> Num. Compradores $</span>
+          <input type="number" [(ngModel)]="NumC" class="form-control" aria-label="Amount (to the nearest dollar)">
+          
+        </div>
+      </div>
+      <div class="mb-3 row">
+        
+        <div class="form-check form-check-inline">
+          <span class="input-group-text"> Tarjeta Cineco </span>
+          <input class="form-check-input" [(ngModel)]="Tarjeta" type="checkbox" id="inlineCheckbox1" value="Si">
+          <label class="form-check-label" for="inlineCheckbox1">Si</label>
+          
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" [(ngModel)]="TarjetaN" type="checkbox" id="inlineCheckbox2" value="No">
+          <label class="form-check-label" for="inlineCheckbox2">No</label>
+        </div>
+      </div>
+      
+      <div class="mb-3 row">
+        <div class="input-group mb-3">
+          <span class="input-group-text"> Cant. Boletos $</span>
+          <input type="number" [(ngModel)]="NumCa" class="form-control" aria-label="Amount (to the nearest dollar)">
+          
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <button   class="btn btn-primary" (click)="operacion()">Calcular</button>
+      </div>
+      <div class="mb-3 row">
+       
+      </div>
+    </div>
+    <div class="col-6" id="salida">
+      <div  class="mb-3 row">
+          <h2>Salida</h2>
+      </div>
+        <div class="mb-3 row">
+            <div class="input-group mb-3">
+              <span class="input-group-text"> Total neto $</span>
+              <input type="number" [(ngModel)]="Precio" class="form-control" aria-label="Amount (to the nearest dollar)">
+              <span class="input-group-text">.00</span>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <div class="input-group mb-3">
+              <span class="input-group-text"> Descuento $</span>
+              <input type="number" [(ngModel)]="DescNumC" class="form-control" aria-label="Amount (to the nearest dollar)">
+              <span class="input-group-text">.00</span>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <div class="input-group mb-3">
+              <span class="input-group-text"> Descuento Cineco $</span>
+              <input type="number" [(ngModel)]="DescNumCa" class="form-control" aria-label="Amount (to the nearest dollar)">
+              <span class="input-group-text">.00</span>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <div class="input-group mb-3">
+              <span class="input-group-text"> Total a pagar $</span>
+              <input type="number" [(ngModel)]="Total" class="form-control" aria-label="Amount (to the nearest dollar)">
+              <span class="input-group-text">.00</span>
+            </div>
+            <div class="input-group mb-3">
+              <span class="input-group-text"> {{nombre}} </span>
+              
+              <span class="input-group-text"></span>
+            </div>
+            <div class="input-group mb-3">
+              <span class="input-group-text">Descuento del 10% al comprar entre 3 y 5 boletos</span>
+             
+            </div>
+            <div class="input-group mb-3">
+              
+              <span class="input-group-text">Descuento del 15% al comprar mas de 5 boletos</span>
+            </div>
+            <div class="input-group mb-3">
+              
+              <span class="input-group-text">Descuento adiccional del 10% al comprar con Cineco</span>
+            </div>
+            <div class="input-group mb-3">
+              
+              <span class="input-group-text">{{mensaje}}</span>
+            </div>
+            
+          </div>
+    </div>
+    <div class="col-6" id="Botones">
+      
+        
+    </div>
+    <div class="col-6">
+      
+        
+    </div>
+  </div>
+
+
+</body>
+</html>
