@@ -20,6 +20,7 @@ export class CineComponent implements OnInit {
   DescNumCa:number=0;
   Max:boolean=false;
 
+
   condicion:number=0;
 
   constructor() { }
@@ -27,13 +28,13 @@ export class CineComponent implements OnInit {
   operacion():void{
     this.condicion=8*this.NumC;
     if(this.NumC==0){
-      this.mensaje='Maximo 7 personas por una persona'
+      this.mensaje='Maximo 7 boletos por persona'
     }
     if(this.NumC==1 && this.NumCa>=8){
       this.Max=true;
-      
       this.DescNumC=0;
       this.NumC=0;
+
       this.NumCa=0;
      }
      else{
